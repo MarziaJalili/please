@@ -4,7 +4,7 @@ function App() {
   return (
     <main>
       <hgroup>
-        <img src={"public/assets/images/icon-plus.svg"} alt="" />
+        <img src={"./assets/images/icon-star.svg"} alt="" />
         <h1>FAQs</h1>
       </hgroup>
 

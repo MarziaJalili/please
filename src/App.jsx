@@ -1,36 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
+import Feature from "./Feature"
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <h4>fuck!!!!!!! it works</h4>
+    <main>
+      <hgroup>
+        <img src={"public/assets/images/icon-plus.svg"} alt="" />
+        <h1>FAQs</h1>
+      </hgroup>
 
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <Feature
+        key={1}
+        question="What is Frontend Mentor, and how will it help me?"
+        answer="Frontend Mentor offers realistic coding challenges to help developers improve their fronted skills with projects in HTML, CSS, and JavaScript. It's suitable for all leavels and ideal for portfolio building."
+      />
+
+      <Feature
+        key={2}
+        question="Is Frontend Mentor free?"
+        answer="Yes, Frontend Mentor offers both free and premium coding challenges, with the free option providing access to a range of projects suitable for all skill levels."
+      />
+
+      <Feature
+        key={3}
+        question="Can I use Frontend Mentor projects in my protfolio?"
+        answer="Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent way to showcase your skills to potential employers! "
+      />
+
+      <Feature
+        key={4}
+        question="How can I get help if I'm stuck on a challenge?"
+        answer="The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can ask questions and seek support from other community members. "
+      />
+    </main>
   )
 }
 

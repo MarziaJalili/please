@@ -9,7 +9,6 @@ function App() {
   return (
     <>
       <div>
-        <h4>fuck!!!!!!! it works</h4>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -18,6 +17,8 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <h4>fuck!!!!!!! it works</h4>
+
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}

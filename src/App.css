@@ -10,14 +10,14 @@
 
 @font-face {
   font-family: "whatever";
-  src: url("public/assets/fonts/WorkSans-VariableFont_wght.ttf");
+  src: url("../public/assets/fonts/WorkSans-VariableFont_wght.ttf");
 }
 
 body {
   font-family: "whatever", sans-serif;
 
   background-color: var(--Light-pink);
-  background-image: url("public/assets/images/background-pattern-mobile.svg");
+  background-image: url("../public/assets/images/background-pattern-mobile.svg");
   background-repeat: no-repeat;
   display: grid;
   place-items: center;

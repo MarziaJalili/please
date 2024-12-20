@@ -2,8 +2,8 @@ import './App.css'
 import Feature from "./Feature"
 function App() {
   return (
-    <main>
-      <hgroup>
+    <main className="faq-accordion">
+      <hgroup className="faq-accordion__heading">
         <img src={"./assets/images/icon-star.svg"} alt="" />
         <h1>FAQs</h1>
       </hgroup>

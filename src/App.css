@@ -8,6 +8,14 @@
 
 }
 
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: "whatever";
   src: url("../public/assets/fonts/WorkSans-VariableFont_wght.ttf");
@@ -19,22 +27,113 @@ body {
   background-color: var(--Light-pink);
   background-image: url("../public/assets/images/background-pattern-mobile.svg");
   background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
   display: grid;
   place-items: center;
   min-height: 100vh;
-  padding: 4rem 1rem;
+  padding-inline: 1rem;
 }
 
-p {
+
+
+.faq-accordion {
+  background-color: var(--White);
+  padding: 1.6rem;
+  border-radius: 10px;
+  display: grid;
+  gap: 1rem;
+}
+
+h1,
+h2 {
+  color: var(--Dark-purple);
+}
+
+.faq-accordion__heading {
+  display: flex;
+  gap: 2rem;
+
+  h1 {
+    margin-block: 0.5rem;
+  }
+
+  img {
+    width: 30px
+  }
+}
+
+
+
+.faq-accordion__feature {
+  border-bottom: 1px solid #eeeeee;
+
+
+  h2 {
+    font-size: 1.15rem;
+  }
+}
+
+.faq-accordion__feature:last-child {
+  border-bottom: none;
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.feature__question {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.feature__show-answer {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.feature__answer {
+  font-size: 1.05rem;
+  color: var(--Grayish-purple);
+  line-height: 1.6rem;
+  margin-block: 1rem;
   display: none;
 }
 
-.feature:nth-child(1) {
-  color: red;
+.feature__answer.shown-answer {
+  display: block;
 }
 
-main {
-  background-color: var(--White);
-  padding: 1.5rem;
-  border-radius: 10px;
+/* desktop */
+@media (min-width: 30em) {
+  body {
+    background-image: url("../public/assets/images/background-pattern-desktop.svg");
+  }
+
+  .faq-accordion {
+    max-width: 700px;
+    padding: 2.5rem;
+  }
+
+  .faq-accordion__heading {
+    font-size: 1.6rem;
+
+    img {
+      width: 40px;
+    }
+  }
+
+  .feature__question {
+    h2 {
+      font-size: 1.25rem;
+    }
+  }
+
+  .feature__answer {
+    font-size: 1.2rem;
+  }
 }

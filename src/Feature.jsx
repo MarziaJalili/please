@@ -4,7 +4,6 @@ export default function Feature(props) {
     const [shown, setShown] = useState(false);
     const questionIcon = shown ? "./assets/images/icon-minus.svg" : "./assets/images/icon-plus.svg";
 
-    const displayAnswer = shown ? "shown-answer" : "";
 
     const handleClick = (event) => {
         setShown(prevState => !prevState)
@@ -20,7 +19,7 @@ export default function Feature(props) {
                     <img src={questionIcon} alt="" />
                 </button>
             </div>
-            <p className={`feature__answer ${displayAnswer}`}>{props.answer}</p>
+            {shown && <p className="feature__answer">{props.answer}</p>}
         </section>
     )
 }
